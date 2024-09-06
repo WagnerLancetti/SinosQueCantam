@@ -1,0 +1,99 @@
+<!-- Pagina de login e cadastro html-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="img/Logoo.png">  <!--icone da aba do navegador-->
+    <link href='https://fonts.googleapis.com/css?family=Hammersmith One' rel='stylesheet'>
+    <title>Login</title> <!-- titulo no navegador -->
+</head>
+
+<body>
+
+    <header> <!--menu superior-->
+        <div class="barrasuperior">
+            <div class="iconprivacidade"><img src="img/privacidade.png" width="25px" height="25px"></div>
+            <div class="politicaprivacidade"><a href="politicadeprivacidade.html">Política de Privacidade</a></div>
+            <div class="toptelefone">(32) 0000-0000</div>
+            <div class="icontelefone"><img src="img/icontel.png" width="25px" height="25px"></div>
+            
+        </div>
+        <div class="boxmenu">
+            <div class="logo">
+                <img src="img/Logotipo.png">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="fale_conosco.php">FALE CONOSCO</a></li>
+                </ul>
+            </div>
+            <div class="login">
+                <a href="login.html"><img id="iconlogin" src="img/iconlogin.png"></a>
+                    <div class="flogin">Faça <a href="login.html">login</a> para<br>  <!--link para pagina de login-->
+                        <b>RESERVAR!</b>
+                    </div> 
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h1>IDENTIFICAÇÃO</h1>
+        <div class="cadastrar">Quero me cadastrar <br><br>
+            <form method="post" action="cadastro.php">  
+                <p> 
+                    <label for="pnome">Primeiro nome</label><br>
+                    <input id="pnome" name="pnome" pattern="([aA-zZ]+)" required="required" type="text" placeholder="  ex. Maria"/>
+                  </p><br>
+
+                <p> 
+                    <label for="unome">Último nome</label><br>
+                    <input id="unome" name="unome" pattern="([aA-zZ]+)" required="required" type="text" placeholder="  ex. Silva"/>
+                </p><br>
+
+                <p> 
+                  <label for="cpf">CPF</label><br>
+                  <input id="cpf" name="cpf" pattern="[0-9]+$" minlength="11" maxlength="11" required="required" type="text" placeholder="  ex. 10020030006"/>
+                </p><br>
+
+                <p> 
+                    <label for="cemail">E-mail</label><br>
+                    <input id="cemail" name="email" required="required" type="email" placeholder="  ex. exemplo@exemplo.com"/>
+                </p><br>
+        
+                <p> 
+                  <label for="csenha">Senha</label><br>
+                  <input id="csenha" name="senha" required="required" type="password" placeholder="  ex. senha" /> 
+                </p>
+                 
+                <p> 
+                  <input name="CadUsuario" id="cenviar" type="submit" value="Continuar"/> 
+                </p>
+            </form>
+        </div>
+        <div class="divisao"><img src="img/divisao.png" width="5px" height="500px"></div>
+        <div class="arealogin">
+            <h3>Login</h3><br>
+            <form method="post" action="login.php">  
+                <p> 
+                  <label for="email">E-mail</label>
+                  <input id="email" name="email" required="required" type="email" placeholder="  ex. exemplo@exemplo.com"/>
+                </p>
+                 <br>
+                <p> 
+                  <label for="senha">Senha</label>
+                  <input id="senha" name="senha" required="required" type="password" placeholder="  ex. senha" /> 
+                </p>
+                 
+                <p> 
+                  <input name=LogUsuario id="enviar" type="submit" value="Entrar" /> 
+                </p>
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>
